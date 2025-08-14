@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* ===== Part 1: CSS Hover & Keyframe Animations ===== */
+.animated-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.animated-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  margin-top: 20px;
+  animation: bounce 2s infinite alternate;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-30px); }
+}
+
+/* ===== Part 3: JS-Triggered Animations ===== */
+.box-animate {
+  animation: moveRight 1s forwards;
+}
+
+@keyframes moveRight {
+  0% { transform: translateX(0); background-color: orange; }
+  100% { transform: translateX(200px); background-color: blue; }
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #f39c12;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
